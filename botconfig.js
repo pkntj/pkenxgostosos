@@ -3,9 +3,9 @@ module.exports = {
   ExpressServer: true, //If you wanted to make the website run or not
   DefaultPrefix: process.env.Prefix || "b!", //Default prefix, Server Admins can change the prefix
   Port: 3000, //Which port website gonna be hosted
-  Token: process.env.Token || "OTM2ODQwMDA4MjY5MTkzMjg4.YfTCPw.QzmPg8cQbcADwhFfLy3gO0NrJbM", //Discord Bot Token
-  ClientID: process.env.Discord_ClientID || "936840008269193288", //Discord Client ID
-  ClientSecret: process.env.Discord_ClientSecret || "oR7UJcyKvdrxmYP13zyf2ezw1vows2ek", //Discord Client Secret
+  Token: process.env.Token || "INSIRA SEU TOKEN AQUI", //Discord Bot Token
+  ClientID: process.env.Discord_ClientID || "INSIRA SEU ID DO BOT AQUI", //Discord Client ID
+  ClientSecret: process.env.Discord_ClientSecret || "INSIRA O SEU CLIENT SECRETO AQUI", //Discord Client Secret
   Scopes: ["identify", "guilds", "applications.commands"], //Discord OAuth2 Scopes
   ServerDeafen: true, //If you want bot to stay deafened
   DefaultVolume: 100, //Sets the default volume of the bot, You can change this number anywhere from 1 to 100
@@ -27,7 +27,7 @@ module.exports = {
   //Lavalink
   Lavalink: {
     id: "Main",
-    host: "lavalink-replit.fadenrg.repl.co",
+    host: "lavalink-replit.fadenrg.repl.co", // CASO DER ERRO DE LAVA LINK, GERE OUTRO E COLOQUE AQUI
     port: 443, // The port that lavalink is listening to. This must be a number!
     pass: "maybeiwasboring",
     secure: true, // Set this to true if the lavalink uses SSL or you're hosting lavalink on repl.it
@@ -35,7 +35,7 @@ module.exports = {
 
   //Please go to https://developer.spotify.com/dashboard/
   Spotify: {
-    ClientID: process.env.Spotify_ClientID || "04c62341eeb94874a00e144e861fdaa5", //Spotify Client ID
-    ClientSecret: process.env.Spotify_ClientSecret || "bd65c812913b4e47a4c8372db9455443", //Spotify Client Secret
+    ClientID: process.env.Spotify_ClientID || "INSIRA SEU CLIENT ID DA SPOTIFY AQUI", //Spotify Client ID
+    ClientSecret: process.env.Spotify_ClientSecret || "INSIRA SEU CLIENT SECRETO DO SPOTIFY AQUI", //Spotify Client Secret
   },
 };
