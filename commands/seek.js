@@ -3,13 +3,13 @@ const { TrackUtils } = require("erela.js");
 
 module.exports = {
   name: "seek",
-  description: "Seek to a position in the song",
+  description: "Procure uma posição na musica",
   usage: "<time s/m/h>",
   permissions: {
     channel: ["VIEW_CHANNEL", "SEND_MESSAGES", "EMBED_LINKS"],
     member: [],
   },
-  aliases: ["forward"],
+  aliases: ["encaminhar"],
   /**
    *
    * @param {import("../structures/DiscordMusicBot")} client
@@ -22,12 +22,12 @@ module.exports = {
     if (!player)
       return client.sendTime(
         message.channel,
-        "❌ | **Nothing is playing right now...**"
+        "❌ | **nada esta tocando agora...**"
       );
     if (!message.member.voice.channel)
       return client.sendTime(
         message.channel,
-        "❌ | **You must be in a voice channel to use this command!**"
+        "❌ | **voce deve estar em um canal de voz para usar este comando!**"
       );
     if (
       message.guild.me.voice.channel &&
@@ -35,12 +35,12 @@ module.exports = {
     )
       return client.sendTime(
         message.channel,
-        ":x: | **You must be in the same voice channel as me to use this command!**"
+        ":x: | **voce deve estar no mesmo canal de voz que eu para usar este comando!**"
       );
     if (!player.queue.current.isSeekable)
       return client.sendTime(
         message.channel,
-        "❌ | **I'm not able to seek this song!**"
+        "❌ | **nao estou conseguindo buscar essa musica!**"
       );
     let SeekTo = client.ParseHumanTime(args.join(" "));
     if (!SeekTo)

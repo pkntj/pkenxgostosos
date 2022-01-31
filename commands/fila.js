@@ -3,8 +3,8 @@ const _ = require("lodash");
 const prettyMilliseconds = require("pretty-ms");
 
 module.exports = {
-  name: "queue",
-  description: "Mostra todas as músicas atualmente nafila",
+  name: "fila",
+  description: "Mostra todas as músicas atualmente na fila",
   usage: "",
   permissions: {
     channel: ["VIEW_CHANNEL", "SEND_MESSAGES", "EMBED_LINKS"],

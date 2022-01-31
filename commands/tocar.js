@@ -10,7 +10,7 @@ module.exports = {
     channel: ["VIEW_CHANNEL", "SEND_MESSAGES", "EMBED_LINKS"],
     member: [],
   },
-  aliases: ["p"],
+  aliases: ["p", "play", "reproduzir"],
   /**
    *
    * @param {import("../structures/DiscordMusicBot")} client

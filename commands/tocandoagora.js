@@ -30,7 +30,7 @@ module.exports = {
       .setAuthor("Atualmente tocando", client.botconfig.IconURL)
       .setColor(client.botconfig.EmbedColor)
       .setDescription(`[${song.title}](${song.uri})`)
-      .addField("Requisito por", `${song.requester}`, true)
+      .addField("Requisitado por", `${song.requester}`, true)
       .addField(
         "Duração",
         `${

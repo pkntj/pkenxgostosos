@@ -2,9 +2,9 @@ const { MessageEmbed } = require("discord.js");
 const { TrackUtils, Player } = require("erela.js");
 
 module.exports = {
-  name: "spularpara",
+  name: "pularpara",
   description: `Pular para a música escolhida na queue`,
-  usage: "<number>",
+  usage: "<número>",
   permissions: {
     channel: ["VIEW_CHANNEL", "SEND_MESSAGES", "EMBED_LINKS"],
     member: [],

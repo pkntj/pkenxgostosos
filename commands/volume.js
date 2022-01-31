@@ -6,10 +6,10 @@ module.exports = {
   description: "Verifique ou altere o volume atual",
   usage: "<volume>",
   permissions: {
-    channel: ["VIEW_CHANNEL", "SEND_MESSAGES", "EMBED_LINKS"],
+    channel: ["VER_CANAL", "ENVIAR_MENSAGENS", "ANEXAR_LINKS"],
     member: [],
   },
-  aliases: ["vol", "v"],
+  aliases : ["vol", "v"],
   /**
    *
    * @param {import("../structures/DiscordMusicBot")} client
@@ -48,10 +48,10 @@ module.exports = {
         `**Por favor, escolha um número entre** \`1 - 100\``
       );
     let vol = parseInt(args[0]);
-    if (vol < 0 || vol > 100) {
+    if (vol < 0 || vol > 200) {
       return client.sendTime(
         message.channel,
-        "❌ | **Por favor, escolha um número entre `1-100`**"
+        "❌ | **Por favor, escolha um número entre `1-200`**"
       );
     } else {
       player.setVolume(vol);
@@ -68,7 +68,7 @@ module.exports = {
         value: "quantidade",
         type: 4,
         required: false,
-        description: "Digite um volume de 1-100. Padrão é 100.",
+        description: "Digite um volume de 1-200. Padrão é 100.",
       },
     ],
     /**
@@ -107,10 +107,10 @@ module.exports = {
           `🔉 | Volume atual \`${player.volume}\`.`
         );
       let vol = parseInt(args[0].value);
-      if (!vol || vol < 1 || vol > 100)
+      if (!vol || vol < 1 || vol > 200)
         return client.sendTime(
           interaction,
-          `**Por favor, escolha um número entre** \`1 - 100\``
+          `**Por favor, escolha um número entre** \`1 - 200\``
         );
       player.setVolume(vol);
       client.sendTime(interaction, `🔉 | Volume definido para \`${player.volume}\``);

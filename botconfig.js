@@ -3,7 +3,7 @@ module.exports = {
   ExpressServer: true, //If you wanted to make the website run or not
   DefaultPrefix: process.env.Prefix || "b!", //Default prefix, Server Admins can change the prefix
   Port: 3000, //Which port website gonna be hosted
-  Token: process.env.Token || "OTM2ODQwMDA4MjY5MTkzMjg4.YfTCPw.DHkVVtoj_e4VwJYTqgLJQvRwg74", //Discord Bot Token
+  Token: process.env.Token || "OTM2ODQwMDA4MjY5MTkzMjg4.YfTCPw.QzmPg8cQbcADwhFfLy3gO0NrJbM", //Discord Bot Token
   ClientID: process.env.Discord_ClientID || "936840008269193288", //Discord Client ID
   ClientSecret: process.env.Discord_ClientSecret || "oR7UJcyKvdrxmYP13zyf2ezw1vows2ek", //Discord Client Secret
   Scopes: ["identify", "guilds", "applications.commands"], //Discord OAuth2 Scopes

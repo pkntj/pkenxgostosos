@@ -33,13 +33,13 @@ module.exports = {
       .setFooter(
         `Para obter informações de cada tipo de comando ${
           GuildDB ? GuildDB.prefix : client.botconfig.DefaultPrefix
-        }help [Command] | Tenha um ótimo dia!`
+        }ajuda [comando] | Tenha um ótimo dia!`
       ).setDescription(`${Commands.join("\n")}
   
-  Discord Music Bot Version: v${require("../package.json").version}
-  [✨ Support Server](${
+  Bot Brocasito: v${require("../package.json").version}
+  [Desenvolvido por PK](${
     client.botconfig.SupportServer
-  }) | [GitHub](https://github.com/SudhanPlayz/Discord-MusicBot) | [Dashboard](${client.botconfig.Website}) | By [SudhanPlayz](https://github.com/SudhanPlayz)`);
+  }) | [Convide-me](https://discord.com/api/oauth2/authorize?client_id=936840008269193288&permissions=8&scope=bot) | [](${client.botconfig.Website}) | [Servidor de suporte](https://discord.gg/cartel-medellin)`);
     if (!args[0]) message.channel.send(Embed);
     else {
       let cmd =

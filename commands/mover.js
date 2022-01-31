@@ -3,7 +3,7 @@ const { TrackUtils } = require("erela.js");
 
 module.exports = {
   name: "move",
-  description: "Moves a track to a specified position.",
+  description: "move uma faixa para uma posiçao especifica",
   usage: "",
   permissions: {
     channel: ["VIEW_CHANNEL", "SEND_MESSAGES", "EMBED_LINKS"],
@@ -22,22 +22,22 @@ module.exports = {
     if (!player)
       return client.sendTime(
         message.channel,
-        "❌ | **Nothing is playing right now...**"
+        "❌ | **nada esta tocando agora...**"
       );
     if (!args[0] || !args[1])
-      return client.sendTime(message.channel, "❌ | **Invalid arguments.**");
+      return client.sendTime(message.channel, "❌ | **argumentos invalidos**");
 
     // Check if (args[0] - 1) is a valid index
     let trackNum = parseInt(args[0] - 1);
     if (trackNum < 1 || trackNum > player.queue.length - 1) {
-      return client.sendTime(message.channel, "❌ | **Invalid track number.**");
+      return client.sendTime(message.channel, "❌ | **numero de faixa invalido**");
     }
 
     let dest = parseInt(args[1] - 1);
     if (dest < 1 || dest > player.queue.length - 1) {
       return client.sendTime(
         message.channel,
-        "❌ | **Invalid track destination.**"
+        "❌ | **destino de faixa invalido.**"
       );
     }
 
@@ -49,7 +49,7 @@ module.exports = {
       message.channel,
       "✅ | **" +
         track.title +
-        "** has been moved to position " +
+        "** foi movido para a posiçao " +
         (dest + 1) +
         "."
     );
@@ -62,14 +62,14 @@ module.exports = {
         value: "track",
         type: 4,
         required: true,
-        description: "Track to move.",
+        description: "pista para se mover.",
       },
       {
         name: "position",
         value: "track2",
         type: 4,
         required: true,
-        description: "Moves selected track to the specified position.",
+        description: "move a faixa selecionada para a posiçao especifica",
       },
     ],
     /**
@@ -87,22 +87,22 @@ module.exports = {
       if (!player)
         return client.sendTime(
           interaction,
-          "❌ | **Nothing is playing right now...**"
+          "❌ | **nada esta tocando agora...**"
         );
       if (!args[0].value || !args[1].value)
-        return client.sendTime(interaction, "❌ | **Invalid track number.**");
+        return client.sendTime(interaction, "❌ | **numero de faixa invalida.**");
 
       // Check if (args[0] - 1) is a valid index
       let trackNum = parseInt(args[0].value - 1);
       if (trackNum < 1 || trackNum > player.queue.length - 1) {
-        return client.sendTime(interaction, "❌ | **Invalid track number.**");
+        return client.sendTime(interaction, "❌ | **numero de faixa invalida**");
       }
 
       let dest = parseInt(args[1].value - 1);
       if (dest < 1 || dest > player.queue.length - 1) {
         return client.sendTime(
           interaction,
-          "❌ | **Invalid track destination.**"
+          "❌ | **destino de faixa invalido**"
         );
       }
 
@@ -114,7 +114,7 @@ module.exports = {
         interaction,
         "✅ | **" +
           track.title +
-          "** has been moved to position " +
+          "** foi movido para a posição " +
           (dest + 1) +
           "."
       );
